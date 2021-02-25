@@ -19,16 +19,11 @@ public class Main {
 
         long a = System.currentTimeMillis();
 
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < SIZE; i++) {
-                    arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-                }
-                System.out.println(System.currentTimeMillis() - a + " первый");
-            }
-        });
-        thread.start();
+        for (int i = 0; i < SIZE; i++) {
+            arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+        }
+        System.out.println(System.currentTimeMillis() - a + " первый");
+
     }
 
     private static void m2(){
@@ -74,6 +69,7 @@ public class Main {
             System.arraycopy(a1, 0, arr, 0, HALF);
             System.arraycopy(a2, 0, arr, HALF, HALF);
             System.out.println(System.currentTimeMillis() - b + " второй");
+
         }
     }
 }
