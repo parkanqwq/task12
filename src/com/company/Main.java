@@ -28,6 +28,7 @@ public class Main {
                 System.out.println(System.currentTimeMillis() - a + " первый");
             }
         });
+        thread.start();
     }
 
     private static void m2(){
