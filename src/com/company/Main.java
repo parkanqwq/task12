@@ -32,10 +32,11 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = 1;
         }
-        System.arraycopy(arr, 0, a1, 0, HALF);
-        System.arraycopy(arr, HALF, a2, 0, HALF);
 
         long b = System.currentTimeMillis();
+        
+        System.arraycopy(arr, 0, a1, 0, HALF);
+        System.arraycopy(arr, HALF, a2, 0, HALF);
 
         Thread thread = new Thread(new Runnable() {
             @Override
