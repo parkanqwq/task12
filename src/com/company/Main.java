@@ -22,8 +22,7 @@ public class Main {
         for (int i = 0; i < SIZE; i++) {
             arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
-        System.out.println(System.currentTimeMillis() - a + " первый");
-
+        System.out.println(System.currentTimeMillis() - a + " первый " + arr[SIZE-1]);
     }
 
     private static void m2(){
@@ -68,8 +67,7 @@ public class Main {
         if (result == 2) {
             System.arraycopy(a1, 0, arr, 0, HALF);
             System.arraycopy(a2, 0, arr, HALF, HALF);
-            System.out.println(System.currentTimeMillis() - b + " второй");
-
+            System.out.println(System.currentTimeMillis() - b + " второй " + arr[SIZE-1]);
         }
     }
 }
