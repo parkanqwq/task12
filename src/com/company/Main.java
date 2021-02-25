@@ -19,10 +19,15 @@ public class Main {
 
         long a = System.currentTimeMillis();
 
-        for (int i = 0; i < SIZE; i++) {
-            arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-        }
-        System.out.println(System.currentTimeMillis() - a + " первый");
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < SIZE; i++) {
+                    arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+                }
+                System.out.println(System.currentTimeMillis() - a + " первый");
+            }
+        });
     }
 
     private static void m2(){
