@@ -45,7 +45,7 @@ public class Main {
                     a1[i] = (float)(a1[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
                 }
                 result++;
-                resultArr(result, a1, a2, arr,b);
+                resultArr(result, a1, a2, arr, b);
             }
         });
 
@@ -56,7 +56,7 @@ public class Main {
                     a2[i] = (float)(a2[i] * Math.sin(0.2f + (HALF+i) / 5) * Math.cos(0.2f + (HALF+i) / 5) * Math.cos(0.4f + (HALF+i) / 2));
                 }
                 result++;
-                resultArr(result, a1, a2, arr,b);
+                resultArr(result, a1, a2, arr, b);
             }
         });
 
